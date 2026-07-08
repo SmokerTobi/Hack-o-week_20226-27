@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIT Nagpur - Collaboration Board</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>hack o week</h1>
+
+    <div class="buttons">
+        <button onclick="saveBoard()">POST (Save)</button>
+        <button onclick="loadBoard()">GET (Load)</button>
+        <button onclick="clearBoard()">DELETE (Clear)</button>
+    </div>
+
+    <canvas id="board" width="1200" height="750"></canvas>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
