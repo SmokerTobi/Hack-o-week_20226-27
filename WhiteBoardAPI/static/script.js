@@ -141,14 +141,8 @@ function loadBoard(){
 }
 
 function clearBoard(){
-    fetch("/clear",{
-        method:"DELETE"
-    })
-    .then(response=>response.json())
-    .then(data=>{
-        alert("DELETE Request Successful: " + data.message);
-        lines=[];
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-        drawLayout();
-    });
+    lines=[];
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    drawLayout();
+    alert("Board cleared! (Saved data is still available — click Load to restore it)");
 }
